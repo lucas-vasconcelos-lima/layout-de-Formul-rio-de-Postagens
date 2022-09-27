@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/gradient_background.xml" value="0.3725" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_adicionar3.xml" value="0.18" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.3725" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.18" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_baseline_add_circle_24_white.xml" value="0.18" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_baseline_control_point_24.xml" value="0.18" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_baseline_view_week_24.xml" value="0.18" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18" />
         <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/layout/card_layout.xml" value="0.2564814814814815" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/layout/card_layout.xml" value="0.33" />
         <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/layout/fragment_home.xml" value="0.262037037037037" />
-        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/layout/fragment_postagem.xml" value="0.2564814814814815" />
+        <entry key="..\:/Users/bruno/AtividadesGeneration/Projeto Integrador/front/layout-de-Formul-rio-de-Postagens/app/src/main/res/layout/fragment_postagem.xml" value="0.33" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Projeto_integrador/Android/task3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1855" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Projeto_integrador/Android/task3/app/src/main/res/drawable/gradient_background.xml" value="0.1855" />
         <entry key="..\:/Users/lucas/OneDrive/Documentos/Generation/Projeto_integrador/Android/task3/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1855" />
