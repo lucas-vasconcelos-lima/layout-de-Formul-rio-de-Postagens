@@ -24,7 +24,7 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.PostagemViewHolder>() {
         holder.binding.textImage.text = postagem.imagem
         holder.binding.textTitulo.text = postagem.titulo
         holder.binding.textDescricao.text = postagem.descricao
-        holder.binding.textCategoria.text = postagem.categoria
+        holder.binding.textCategoria.text = postagem.categoria.descricao
     }
 
 
