@@ -23,25 +23,6 @@ class HomeFragment : Fragment() {
 
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
-        val listGenerica = listOf(
-            Postagem(
-                "https://d225afdvrjsxie.cloudfront.net/Custom/Content/Products/47/40/47406_dipirona-sodica-50mg-com-100ml-medley_m1_637733730879334040.jpg",
-                "Dipirona",
-                "Analgésico e antipirético",
-                "Medicamento"
-            ),
-
-            Postagem(
-                "https://cf.shopee.com.br/file/ac1d8e61a8e1388acefe63fe7569daa7",
-                "FORMULA INFANTIL NAN COMFOR 1",
-                "Fórmula infantil para lactentes de 0 a 6 meses de idade. Com prebióticos, dha, ara e nucleotídeos. Não contém glúten.",
-                "Alimentação"
-            )
-        )
-
-
-
-
 
         // Configurações do RecyclerView
         val adapter = HomeAdapter()
@@ -49,7 +30,6 @@ class HomeFragment : Fragment() {
         binding.recyclerPostagem.adapter = adapter
         binding.recyclerPostagem.setHasFixedSize(true)
 
-        adapter.setList(listGenerica)
 
 
         binding.floatingAdd.setOnClickListener{
