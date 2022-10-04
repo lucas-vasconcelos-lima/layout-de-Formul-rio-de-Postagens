@@ -23,6 +23,8 @@ class HomeFragment : Fragment() {
 
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
 
+
+
         val listGenerica = listOf(
             Postagem(
                 "https://d225afdvrjsxie.cloudfront.net/Custom/Content/Products/47/40/47406_dipirona-sodica-50mg-com-100ml-medley_m1_637733730879334040.jpg",
@@ -40,9 +42,6 @@ class HomeFragment : Fragment() {
         )
 
 
-
-
-
         // Configurações do RecyclerView
         val adapter = HomeAdapter()
         binding.recyclerPostagem.layoutManager =  LinearLayoutManager(context)
@@ -55,7 +54,6 @@ class HomeFragment : Fragment() {
         binding.floatingAdd.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_postagemFragment)
         }
-
 
         return binding.root
     }

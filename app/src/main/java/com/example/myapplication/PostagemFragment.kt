@@ -1,18 +1,21 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentPostagemBinding
 
 class PostagemFragment : Fragment() {
 
     private lateinit var binding: FragmentPostagemBinding
+    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,17 +24,24 @@ class PostagemFragment : Fragment() {
 
         binding = FragmentPostagemBinding.inflate(layoutInflater, container, false)
 
-        binding.buttonCancelar.setOnClickListener{
+        binding.buttonCancelar.setOnClickListener {
             findNavController().navigate(R.id.action_postagemFragment_to_homeFragment)
         }
 
+
+
+        mainViewModel.myCategoriaResponse.observe(viewLifecycleOwner) {
+            Log.d("Requisicao", it.body().toString())
+        }
+/*
         binding.buttonSalvar.setOnClickListener{
             salvar()
         }
-
+*/
         return binding.root
     }
-
+}
+/*
     private fun salvar(){
         val titulo = binding.editNome.text.toString()
         val descricao = binding.editDesc.text.toString()
@@ -45,9 +55,10 @@ class PostagemFragment : Fragment() {
         }
     }
 
-
     private fun validarCampos(titulo: String, linkImg: String, desc: String): Boolean{
-        return !((titulo == "" || titulo.length < 3 || titulo.length > 20) || Patterns.WEB_URL.matcher(linkImg).matches() || (desc == "" || desc.length < 5 || desc.length > 200))
+        return !((titulo == "" || titulo.length < 3 || titulo.length > 20)
+                || Patterns.WEB_URL.matcher(linkImg).matches() ||
+                (desc == "" || desc.length < 5 || desc.length > 200))
     }
-
 }
+*/
