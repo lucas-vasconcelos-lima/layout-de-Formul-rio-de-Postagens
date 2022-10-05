@@ -30,7 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:textColor="#000000"
-            android:textSize="24sp"
+            android:textSize="34sp"
+            android:textStyle="bold"
             tools:text="Titulo" />
 
         <TextView
@@ -51,20 +52,13 @@
             android:textSize="24sp"
             tools:text="Categoria" />
 
-        <Spinner
-            android:id="@+id/spinnerCategoria"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:minHeight="48dp"
-            tools:ignore="SpeakableTextPresentCheck" />
-
         <Button
             android:id="@+id/buttonDeletar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FF2E00"
-            android:text="Deletar Postagem" />
+            android:text="@string/deletar_postagem"
+            android:textColor="#000000" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

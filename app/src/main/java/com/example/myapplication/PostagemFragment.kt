@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentPostagemBinding
 import com.example.myapplication.model.Categoria
 import com.example.myapplication.model.Postagem
+import com.example.myapplication.util.MainViewModel
 
 class PostagemFragment : Fragment() {
 
@@ -31,11 +32,12 @@ class PostagemFragment : Fragment() {
         mainViewModel.listCategoria()
 
         mainViewModel.myCategoriaResponse.observe(viewLifecycleOwner) {
-            Log.d("Requisicao", it.body().toString())
+          response ->  Log.d("Requisicao", response.body().toString())
+            spinnerCategoria(response.body())
         }
 
         binding.buttonSalvar.setOnClickListener {
-            salvarNoBanco()
+            inserirNoBanco()
         }
 
         return binding.root
@@ -59,8 +61,6 @@ class PostagemFragment : Fragment() {
                     TODO("Not yet implemented")
                 }
             }
-
-
         }
     }
 
@@ -72,15 +72,15 @@ class PostagemFragment : Fragment() {
                         (desc == "" || desc.length < 5 || desc.length > 200))
     }
 
-    private fun salvarNoBanco() {
+    private fun inserirNoBanco() {
 
-        val titulo = binding.editNome.text.toString()
-        val descricao = binding.editDesc.text.toString()
-        val linkImg = binding.editImg.text.toString()
-        val categoria = Categoria(categoriaSelecionada, null, null)
+        val imagem = binding.editImagem.text.toString()
+        val titulo = binding.editTitulo.text.toString()
+        val descricao = binding.editDescricao.text.toString()
+        val categoria = Categoria(categoriaSelecionada, null, null,null)
 
-        if (validarCampos(titulo, descricao, linkImg)) {
-            val postagem = Postagem(0, titulo, descricao, linkImg, categoria)
+        if (validarCampos(titulo, descricao, imagem)) {
+            val postagem = Postagem(0, imagem, titulo, descricao, categoria)
             mainViewModel.addPostagem(postagem)
             Toast.makeText(context, "Postagem Criada!", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_postagemFragment_to_homeFragment)

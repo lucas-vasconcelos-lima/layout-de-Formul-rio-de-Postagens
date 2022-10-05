@@ -6,20 +6,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.CardLayoutBinding
 import com.example.myapplication.model.Postagem
 
-class HomeAdapter: RecyclerView.Adapter<HomeAdapter.PostagemViewHolder>() {
+class PostagemAdapter: RecyclerView.Adapter<PostagemAdapter.PostagemViewHolder>() {
 
-    private var listaPostagem = emptyList<Postagem>()
+    private var listPostagem = emptyList<Postagem>()
 
     class PostagemViewHolder(val binding: CardLayoutBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostagemViewHolder {
         return PostagemViewHolder(CardLayoutBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false
-        ))
+            LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: PostagemViewHolder, position: Int) {
-        val postagem = listaPostagem[position]
+        val postagem = listPostagem[position]
 
         holder.binding.textImage.text = postagem.imagem
         holder.binding.textTitulo.text = postagem.titulo
@@ -29,13 +28,13 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.PostagemViewHolder>() {
 
 
     override fun getItemCount(): Int {
-        return  listaPostagem.size
+        return  listPostagem.size
     }
 
 
     fun setList(list: List<Postagem>){
 
-        listaPostagem = list
+        listPostagem = list
         notifyDataSetChanged()
     }
 

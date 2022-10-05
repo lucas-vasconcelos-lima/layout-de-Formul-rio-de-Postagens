@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.adapter.HomeAdapter
+import com.example.myapplication.adapter.PostagemAdapter
 import com.example.myapplication.databinding.FragmentHomeBinding
-import com.example.myapplication.model.Postagem
+import com.example.myapplication.util.MainViewModel
 
 
 class HomeFragment : Fragment() {
@@ -18,6 +18,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private val mainViewModel: MainViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +30,7 @@ class HomeFragment : Fragment() {
 
 
         // Configurações do RecyclerView
-        val adapter = HomeAdapter()
+        val adapter = PostagemAdapter()
         binding.recyclerPostagem.layoutManager =  LinearLayoutManager(context)
         binding.recyclerPostagem.adapter = adapter
         binding.recyclerPostagem.setHasFixedSize(true)
@@ -43,9 +44,8 @@ class HomeFragment : Fragment() {
         mainViewModel.myPostagemResponse.observe(viewLifecycleOwner){
             response -> if (response.body() != null){
                 adapter.setList(response.body()!!)
+            }
         }
-        }
-
         return binding.root
     }
 }

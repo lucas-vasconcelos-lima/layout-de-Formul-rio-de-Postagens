@@ -1,4 +1,5 @@
-package com.example.myapplication
+package com.example.myapplication.util
+
 import androidx.lifecycle.viewModelScope
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -9,7 +10,6 @@ import kotlinx.coroutines.launch
 import com.example.myapplication.model.Categoria
 import com.example.myapplication.model.Postagem
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -37,7 +37,6 @@ class MainViewModel @Inject constructor(
             }catch (e: Exception){
                 Log.d("Erro", e.message.toString())
             }
-
         }
     }
 
